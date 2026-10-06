@@ -1,0 +1,4666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sumit FF Store</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.how-section{
+  padding:55px 18px 65px;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255,215,0,.07),
+      transparent 45%
+    );
+}
+
+.how-section .section-title{
+  text-align:center;
+  margin-bottom:28px;
+}
+
+.steps{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+
+.step{
+  padding:22px;
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.055),
+      rgba(255,255,255,.018)
+    );
+
+  border:1px solid rgba(255,215,0,.14);
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.28);
+
+  transition:.2s ease;
+}
+
+.step:active{
+  transform:scale(.98);
+}
+
+.step > div{
+  width:40px;
+  height:40px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-bottom:15px;
+
+  border-radius:11px;
+
+  background:rgba(255,215,0,.09);
+
+  border:1px solid rgba(255,215,0,.25);
+
+  color:#ffd700;
+
+  font-size:11px;
+  font-weight:800;
+}
+
+.step h3{
+  margin:0 0 8px;
+
+  color:#fff;
+
+  font-size:17px;
+  font-weight:800;
+}
+
+.step p{
+  margin:0;
+
+  color:#8f9bad;
+
+  font-size:11.5px;
+  line-height:1.7;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer{
+  padding:38px 18px 110px;
+
+  text-align:center;
+
+  background:#050505;
+
+  border-top:1px solid
+    rgba(255,215,0,.10);
+}
+
+.footer-brand{
+  margin-bottom:22px;
+
+  font-family:"Bebas Neue",sans-serif;
+
+  font-size:26px;
+  letter-spacing:1px;
+}
+
+.footer-brand span{
+  color:#fff;
+}
+
+.footer-brand strong{
+  color:#ffd700;
+}
+
+.footer-links{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+
+  gap:10px;
+}
+
+.footer-links button{
+  border:0;
+
+  background:transparent;
+
+  color:#aebbd0;
+
+  font-family:Poppins,sans-serif;
+
+  font-size:11px;
+
+  cursor:pointer;
+
+  padding:7px 9px;
+}
+
+.footer-links button:active{
+  color:#ffd700;
+}
+
+.footer-line{
+  height:1px;
+
+  margin:22px auto 16px;
+
+  max-width:500px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,215,0,.25),
+      transparent
+    );
+}
+
+.footer-copy{
+  margin:0;
+
+  color:#596579;
+
+  font-size:10px;
+}
+
+
+/* =========================================
+   TERMS PAGE
+========================================= */
+
+.terms-page{
+  position:fixed;
+  inset:0;
+
+  z-index:10000;
+
+  display:none;
+  flex-direction:column;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255,215,0,.08),
+      transparent 32%
+    ),
+    #050505;
+
+  color:#fff;
+
+  overflow:hidden;
+}
+
+.terms-page.active{
+  display:flex;
+
+  animation:termsPageIn .28s ease;
+}
+
+@keyframes termsPageIn{
+
+  from{
+    opacity:0;
+    transform:translateY(18px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+
+/* TERMS HEADER */
+
+.terms-header{
+  flex:0 0 auto;
+
+  height:72px;
+
+  padding:0 18px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  background:rgba(5,5,5,.96);
+
+  border-bottom:1px solid
+    rgba(255,215,0,.16);
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,.35);
+}
+
+.terms-back{
+  width:44px;
+  height:44px;
+
+  border:1px solid
+    rgba(255,215,0,.28);
+
+  border-radius:13px;
+
+  background:rgba(255,215,0,.06);
+
+  color:#ffd700;
+
+  font-size:36px;
+
+  line-height:1;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  cursor:pointer;
+
+  transition:.2s ease;
+}
+
+.terms-back:active{
+  transform:scale(.92);
+
+  background:
+    rgba(255,215,0,.14);
+}
+
+.terms-brand{
+  font-family:"Bebas Neue",sans-serif;
+
+  font-size:26px;
+
+  letter-spacing:1px;
+}
+
+.terms-brand span{
+  color:#fff;
+}
+
+.terms-brand strong{
+  color:#ffd700;
+}
+
+.terms-header-icon{
+  width:44px;
+  height:44px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:13px;
+
+  border:1px solid
+    rgba(255,215,0,.25);
+
+  color:#ffd700;
+
+  background:
+    rgba(255,215,0,.06);
+
+  font-size:21px;
+}
+
+
+/* TERMS SCROLL */
+
+.terms-content{
+  flex:1;
+
+  overflow-y:auto;
+  overflow-x:hidden;
+
+  padding:
+    24px
+    18px
+    50px;
+
+  -webkit-overflow-scrolling:touch;
+}
+
+
+/* TERMS HERO */
+
+.terms-hero{
+  text-align:center;
+
+  max-width:650px;
+
+  margin:
+    4px
+    auto
+    26px;
+}
+
+.terms-icon{
+  width:68px;
+  height:68px;
+
+  margin:
+    0 auto 16px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,215,0,.16),
+      rgba(255,153,0,.04)
+    );
+
+  border:1px solid
+    rgba(255,215,0,.3);
+
+  box-shadow:
+    0 0 35px
+    rgba(255,215,0,.10);
+
+  font-size:30px;
+}
+
+.terms-hero h1{
+  margin:0 0 9px;
+
+  color:#fff;
+
+  font-family:"Bebas Neue",sans-serif;
+
+  font-size:42px;
+
+  letter-spacing:1px;
+}
+
+.terms-hero p{
+  margin:0;
+
+  color:#8290a2;
+
+  font-family:Poppins,sans-serif;
+
+  font-size:12px;
+
+  line-height:1.7;
+}
+
+
+/* TERMS CARDS */
+
+.terms-card{
+  max-width:650px;
+
+  margin:
+    0 auto 14px;
+
+  padding:18px;
+
+  border-radius:17px;
+
+  background:
+    rgba(255,255,255,.035);
+
+  border:1px solid
+    rgba(255,215,0,.14);
+
+  box-shadow:
+    0 12px 30px
+    rgba(0,0,0,.20);
+}
+
+.terms-card-title{
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  margin-bottom:10px;
+
+  color:#fff;
+
+  font-size:15px;
+
+  font-weight:800;
+}
+
+.terms-card-title span{
+  flex:0 0 34px;
+
+  width:34px;
+  height:30px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:9px;
+
+  background:
+    rgba(255,215,0,.10);
+
+  border:1px solid
+    rgba(255,215,0,.25);
+
+  color:#ffd700;
+
+  font-size:10px;
+
+  font-weight:800;
+}
+
+.terms-card p{
+  margin:0;
+
+  color:#9ca8b8;
+
+  font-size:11.5px;
+
+  line-height:1.7;
+}
+
+
+/* FINAL NOTE */
+
+.terms-footer-note{
+  max-width:650px;
+
+  margin:22px auto 0;
+
+  padding:18px;
+
+  display:flex;
+
+  gap:14px;
+
+  border-radius:17px;
+
+  background:
+    rgba(0,230,160,.05);
+
+  border:1px solid
+    rgba(0,230,160,.14);
+}
+
+.terms-footer-icon{
+  flex:0 0 42px;
+
+  width:42px;
+  height:42px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:12px;
+
+  background:
+    rgba(0,230,160,.10);
+
+  color:#00e6a0;
+
+  font-size:20px;
+}
+
+.terms-footer-note strong{
+  display:block;
+
+  margin-bottom:4px;
+
+  color:#fff;
+
+  font-size:13px;
+}
+
+.terms-footer-note p{
+  margin:0;
+
+  color:#8290a2;
+
+  font-size:11px;
+
+  line-height:1.6;
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .how-section{
+    padding:
+      45px
+      14px
+      55px;
+  }
+
+  .terms-header{
+    height:66px;
+    padding:0 14px;
+  }
+
+  .terms-brand{
+    font-size:23px;
+  }
+
+  .terms-header-icon,
+  .terms-back{
+    width:42px;
+    height:42px;
+  }
+
+  .terms-content{
+    padding:
+      22px
+      14px
+      42px;
+  }
+
+  .terms-hero h1{
+    font-size:36px;
+  }
+
+  .terms-hero p{
+    font-size:11px;
+  }
+
+  .terms-card{
+    padding:17px;
+    border-radius:16px;
+  }
+
+  .terms-card-title{
+    font-size:14px;
+  }
+
+  .terms-card p{
+    font-size:11.5px;
+  }
+
+}
+
+/* =========================================
+   PAYMENT UPI ID BOX
+========================================= */
+
+.upi-info-box{
+  margin:18px 0 22px;
+  padding:18px;
+  border-radius:18px;
+  background:linear-gradient(
+    145deg,
+    rgba(255,215,0,.10),
+    rgba(255,255,255,.025)
+  );
+  border:1px solid rgba(255,215,0,.30);
+  box-shadow:
+    0 0 18px rgba(255,215,0,.08),
+    inset 0 0 20px rgba(255,215,0,.025);
+}
+
+.upi-label{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  color:#aaa;
+  margin-bottom:9px;
+}
+
+.upi-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+#paymentUpiId{
+  color:#ffd000;
+  font-size:17px;
+  font-weight:700;
+  word-break:break-all;
+}
+
+.upi-copy-btn{
+  border:1px solid rgba(255,215,0,.45);
+  background:rgba(255,215,0,.12);
+  color:#ffd000;
+  padding:9px 14px;
+  border-radius:10px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.5px;
+  cursor:pointer;
+}
+
+.upi-copy-btn:active{
+  transform:scale(.96);
+}
+
+.upi-note{
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid rgba(255,255,255,.08);
+  color:#aeb4c2;
+  font-size:12px;
+  line-height:1.6;
+}
+
+/* ACCOUNT PAGE FINAL SIZE */
+
+#accountPage{
+  padding-bottom:0 !important;
+}
+
+#accountPage .paybox{
+  padding:18px 14px 20px !important;
+}
+
+#accountPage .paycard{
+  padding:20px !important;
+  margin-bottom:0 !important;
+}
+
+#accountPage .paycard > div:first-child{
+  margin-bottom:14px !important;
+}
+
+#accountPage .account-input{
+  height:64px !important;
+  margin-bottom:12px !important;
+}
+
+#accountPage .account-btn{
+  height:60px !important;
+  margin-top:8px !important;
+}
+
+/* ==============================
+   FF PROFILE COMPACT UI
+============================== */
+
+.profile-btn{
+  width:100%;
+  margin:8px 0 14px;
+  padding:12px;
+  border:1px solid #FFD700;
+  border-radius:14px;
+  background:linear-gradient(90deg,#17120a,#2a2105);
+  color:#FFD700;
+  font-weight:800;
+  font-size:15px;
+  letter-spacing:1px;
+  box-shadow:0 0 14px rgba(255,215,0,.25);
+  cursor:pointer;
+}
+
+.live-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+
+.live-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#00ff66;
+  box-shadow:0 0 8px #00ff66;
+  animation:liveBlink 1s infinite;
+}
+
+@keyframes liveBlink{
+  0%,100%{
+    opacity:1;
+    transform:scale(1);
+  }
+  50%{
+    opacity:.25;
+    transform:scale(.65);
+  }
+}
+
+
+/* PROFILE OVERLAY */
+
+#profile512{
+  position:fixed;
+  inset:0;
+  z-index:2000;
+  display:none;
+  overflow:auto;
+  background:#05010a;
+}
+
+#profile512.active{
+  display:block;
+}
+
+.profile-wrap{
+  max-width:650px;
+  margin:auto;
+  padding:16px;
+  padding-bottom:40px;
+}
+
+.profile-top{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:16px;
+}
+
+.profile-back{
+  width:46px;
+  height:46px;
+  border:0;
+  border-radius:13px;
+  background:#222;
+  color:white;
+  font-size:24px;
+}
+
+.profile-title{
+  font-size:22px;
+  font-weight:800;
+}
+
+.profile-card{
+  background:#111;
+  border:1px solid #2b2b2b;
+  border-radius:24px;
+  padding:18px;
+  box-shadow:0 0 25px #7B2CFF;
+}
+
+.profile-id{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  font-size:20px;
+  font-weight:800;
+}
+
+.profile-status{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  color:#00ff66;
+  font-size:12px;
+  font-weight:800;
+}
+
+.profile-price{
+  margin:16px 0;
+  padding:15px;
+  text-align:center;
+  border-radius:17px;
+  background:linear-gradient(135deg,#211900,#4a3500);
+  border:1px solid #FFD700;
+  box-shadow:0 0 18px rgba(255,215,0,.22);
+}
+
+.profile-price small{
+  display:block;
+  color:#aaa;
+  font-size:11px;
+  letter-spacing:2px;
+}
+
+.profile-price strong{
+  display:block;
+  margin-top:3px;
+  color:#FFD700;
+  font-size:32px;
+}
+
+.profile-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.profile-item{
+  min-height:76px;
+  padding:12px;
+  border-radius:16px;
+  background:#181818;
+  border:1px solid #292929;
+}
+
+.profile-item:nth-child(1){
+  border-color:#9b59ff;
+}
+
+.profile-item:nth-child(2){
+  border-color:#ff4f91;
+}
+
+.profile-item:nth-child(3){
+  border-color:#55bfff;
+}
+
+.profile-item:nth-child(4){
+  border-color:#ff7a18;
+}
+
+.profile-item:nth-child(5){
+  border-color:#ffd700;
+}
+
+.profile-item:nth-child(6){
+  border-color:#c56cff;
+}
+
+.profile-label{
+  font-size:11px;
+  font-weight:800;
+  color:#aaa;
+  letter-spacing:1px;
+}
+
+.profile-value{
+  margin-top:6px;
+  font-size:18px;
+  font-weight:800;
+  color:white;
+}
+
+.profile-buy{
+  width:100%;
+  margin-top:14px;
+  padding:15px;
+  border:0;
+  border-radius:15px;
+  background:linear-gradient(90deg,#FFD700,#FF9900);
+  color:#000;
+  font-size:17px;
+  font-weight:900;
+}
+
+/* =========================
+   DIRECT FF PROFILE - SHARP UI
+========================= */
+
+.quick-profile{
+  margin-top:10px;
+  padding:12px;
+  border-radius:14px;
+  background:#111;
+  border:1px solid #292929;
+  box-shadow:0 0 18px rgba(123,44,255,.35);
+}
+
+/* ID + AVAILABLE */
+
+.quick-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  margin-bottom:10px;
+}
+
+.quick-id{
+  color:#fff;
+  font-size:18px;
+  font-weight:800;
+}
+
+.quick-status{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  color:#00ff66;
+  font-size:11px;
+  font-weight:800;
+}
+
+.quick-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#00ff66;
+  box-shadow:0 0 8px #00ff66;
+  animation:quickBlink 1s infinite;
+}
+
+@keyframes quickBlink{
+
+  0%,100%{
+    opacity:1;
+    transform:scale(1);
+  }
+
+  50%{
+    opacity:.25;
+    transform:scale(.65);
+  }
+
+}
+
+
+/* PRICE */
+
+.quick-price{
+  text-align:center;
+  padding:9px;
+  margin-bottom:9px;
+  border-radius:9px;
+  background:linear-gradient(
+    135deg,
+    #211900,
+    #392900
+  );
+  border:1px solid #FFD700;
+  box-shadow:0 0 14px rgba(255,215,0,.20);
+}
+
+.quick-price span{
+  display:block;
+  font-size:9px;
+  letter-spacing:2px;
+  color:#aaa;
+}
+
+.quick-price strong{
+  display:block;
+  margin-top:2px;
+  color:#FFD700;
+  font-size:27px;
+  font-weight:900;
+}
+
+
+/* SIX OPTIONS */
+
+.quick-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:7px;
+}
+
+.quick-item{
+  padding:9px;
+  min-height:58px;
+  border-radius:7px;
+  background:#181818;
+  border:1px solid #333;
+}
+
+.quick-item span{
+  display:block;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.4px;
+}
+
+.quick-item b{
+  display:block;
+  margin-top:4px;
+  color:#fff;
+  font-size:17px;
+  font-weight:800;
+}
+
+
+/* DIFFERENT COLORS */
+
+.quick-item.level{
+  border-color:#9b59ff;
+}
+
+.quick-item.level span{
+  color:#b875ff;
+}
+
+
+.quick-item.likes{
+  border-color:#ff4f91;
+}
+
+.quick-item.likes span{
+  color:#ff6fa7;
+}
+
+
+.quick-item.old{
+  border-color:#55bfff;
+}
+
+.quick-item.old span{
+  color:#55bfff;
+}
+
+
+.quick-item.evo{
+  border-color:#ff7a18;
+}
+
+.quick-item.evo span{
+  color:#ff8b32;
+}
+
+
+.quick-item.prime{
+  border-color:#FFD700;
+}
+
+.quick-item.prime span{
+  color:#FFD700;
+}
+
+
+.quick-item.emotes{
+  border-color:#c56cff;
+}
+
+.quick-item.emotes span{
+  color:#d27dff;
+}
+
+
+/* BUY NOW */
+
+.quick-profile .buy{
+  width:100%;
+  margin-top:10px;
+  padding:13px;
+  border-radius:10px;
+  font-size:16px;
+}
+
+/* IMAGE FULLSCREEN VIEWER */
+
+#imageViewer{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.96);
+  padding:15px;
+}
+
+#imageViewer.active{
+  display:flex;
+}
+
+#imageViewer img{
+  max-width:100%;
+  max-height:90vh;
+  object-fit:contain;
+  border-radius:8px;
+}
+
+.image-viewer-close{
+  position:absolute;
+  top:18px;
+  right:18px;
+  width:42px;
+  height:42px;
+  border:0;
+  border-radius:8px;
+  background:#222;
+  color:#fff;
+  font-size:25px;
+  z-index:2;
+}
+
+.slider .slide{
+  cursor:pointer;
+}
+
+/* =========================================
+   PAYMENT - AFTER PAYMENT FINAL UI
+========================================= */
+
+/* AFTER PAYMENT TITLE */
+.after-payment-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:22px 0 16px;
+  color:#777;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:3px;
+  text-align:center;
+}
+
+.after-payment-title span{
+  flex:1;
+  height:1px;
+  background:#292929;
+}
+
+
+/* FIELD */
+.payment-field{
+  width:100%;
+  margin-bottom:14px;
+}
+
+.payment-field label{
+  display:block;
+  margin-bottom:6px;
+  color:#c4c4c4;
+  font-size:14px;
+  font-weight:500;
+}
+
+
+/* INPUT */
+.payment-input{
+  width:100%;
+  height:50px;
+
+  padding:0 14px;
+
+  background:#080808;
+  border:1px solid #292929;
+  border-radius:14px;
+
+  color:#fff;
+  font-family:inherit;
+  font-size:14px;
+
+  outline:none;
+  box-sizing:border-box;
+
+  transition:.2s ease;
+}
+
+.payment-input::placeholder{
+  color:#686868;
+}
+
+.payment-input:focus{
+  border-color:#8b5cff;
+  box-shadow:0 0 10px rgba(139,92,255,.15);
+}
+
+
+/* PAYMENT SCREENSHOT */
+.screenshot-upload{
+  width:100%;
+  height:58px;
+  min-height:58px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+
+  box-sizing:border-box;
+
+  background:#151109;
+  border:1px dashed #665400;
+  border-radius:15px;
+
+  color:#ffd400;
+  font-size:14px;
+  font-weight:500;
+
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.screenshot-upload span{
+  font-size:18px;
+}
+
+.screenshot-upload:hover{
+  border-color:#ffd400;
+  background:#1b1608;
+}
+
+
+/* SUBMIT BUTTON */
+#submitBtn{
+  width:100%;
+  height:58px;
+
+  margin-top:2px;
+
+  border:0;
+  border-radius:15px;
+
+  background:#fff;
+  color:#080808;
+
+  font-family:inherit;
+  font-size:17px;
+  font-weight:800;
+
+  cursor:pointer;
+
+  transition:.2s ease;
+}
+
+#submitBtn:active{
+  transform:scale(.98);
+}
+
+#submitBtn:hover{
+  box-shadow:0 0 18px rgba(255,255,255,.12);
+}
+
+
+/* NOTE */
+.payment-note{
+  margin-top:10px;
+
+  text-align:center;
+
+  color:#555;
+  font-size:10px;
+  line-height:1.4;
+}
+
+
+/* MOBILE */
+@media(max-width:600px){
+
+  .after-payment-title{
+    gap:10px;
+    margin:20px 0 15px;
+    font-size:11px;
+    letter-spacing:2.5px;
+  }
+
+  .payment-field{
+    margin-bottom:13px;
+  }
+
+  .payment-field label{
+    margin-bottom:6px;
+    font-size:13px;
+  }
+
+  .payment-input{
+    height:48px;
+    padding:0 13px;
+    border-radius:13px;
+    font-size:14px;
+  }
+
+  .screenshot-upload{
+    height:58px;
+    min-height:58px;
+    border-radius:14px;
+    font-size:13px;
+  }
+
+  .screenshot-upload span{
+    font-size:18px;
+  }
+
+  #submitBtn{
+    height:58px;
+    border-radius:14px;
+    font-size:16px;
+  }
+
+  .payment-note{
+    margin-top:9px;
+    font-size:10px;
+  }
+
+}
+
+/* PAYMENT SCREENSHOT - INPUT STYLE */
+
+#paymentPage .payment-field label.screenshot-upload{
+  width:100% !important;
+  height:50px !important;
+  min-height:50px !important;
+
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  gap:8px !important;
+
+  margin:0 !important;
+  padding:0 14px !important;
+  box-sizing:border-box !important;
+
+  background:#080808 !important;
+  border:1px solid #292929 !important;
+  border-radius:14px !important;
+
+  color:#FFD700 !important;
+  font-size:14px !important;
+  font-weight:500 !important;
+
+  cursor:pointer !important;
+}
+
+#paymentPage .payment-field label.screenshot-upload span{
+  color:#FFD700 !important;
+  font-size:18px !important;
+}
+
+#paymentPage .payment-field label.screenshot-upload:active{
+  transform:scale(.99);
+}
+
+<style>
+
+/* =========================================
+   PREMIUM PURCHASE / HISTORY UI
+========================================= */
+
+#purchasesPage .paybox,
+#historyPage .paybox{
+  padding:18px 14px 35px;
+}
+
+/* ORDER CARD */
+.purchase-card,
+.premium-order-card{
+  position:relative;
+  overflow:hidden;
+  margin-bottom:16px;
+  padding:20px;
+  border-radius:24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.075),
+      rgba(255,255,255,.025)
+    );
+
+  border:1px solid rgba(255,215,0,.13);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.04);
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+
+/* GOLD TOP LINE */
+.purchase-card::before,
+.premium-order-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:15%;
+  width:70%;
+  height:2px;
+
+  background:linear-gradient(
+    90deg,
+    transparent,
+    #FFD700,
+    transparent
+  );
+
+  opacity:.8;
+}
+
+/* TOP AREA */
+.purchase-top,
+.order-card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+}
+
+/* ACCOUNT NAME */
+.purchase-title,
+.order-account{
+  color:#fff;
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:.2px;
+}
+
+/* SMALL LABEL */
+.order-label{
+  color:#777;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  margin-bottom:5px;
+}
+
+/* PRICE */
+.purchase-price,
+.order-amount{
+  margin:15px 0;
+  color:#FFD700;
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:.3px;
+}
+
+/* STATUS */
+.purchase-status,
+.premium-status{
+  padding:7px 11px;
+  border-radius:50px;
+
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.6px;
+  white-space:nowrap;
+}
+
+/* PENDING */
+.status-pending{
+  color:#FFD700;
+  background:rgba(255,215,0,.08);
+  border:1px solid rgba(255,215,0,.18);
+}
+
+/* APPROVED */
+.status-approved{
+  color:#42e88a;
+  background:rgba(66,232,138,.08);
+  border:1px solid rgba(66,232,138,.18);
+}
+
+/* REJECTED */
+.status-rejected{
+  color:#ff5b5b;
+  background:rgba(255,91,91,.08);
+  border:1px solid rgba(255,91,91,.18);
+}
+
+/* DELIVERED */
+.status-delivered{
+  color:#42d3ff;
+  background:rgba(66,211,255,.08);
+  border:1px solid rgba(66,211,255,.18);
+}
+
+/* DETAILS */
+.purchase-info,
+.order-details{
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.07);
+
+  color:#858585;
+  font-size:12px;
+  line-height:2;
+}
+
+/* HISTORY DETAIL ROWS */
+.order-details{
+  display:grid;
+  gap:9px;
+  line-height:1.4;
+}
+
+.order-details div{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  color:#888;
+}
+
+.order-details strong{
+  margin-left:auto;
+  color:#ddd;
+  font-weight:600;
+  text-align:right;
+}
+
+/* VERIFIED */
+.verified-line{
+  color:#42e88a;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1.2px;
+  margin-bottom:13px;
+}
+
+/* PURCHASE MESSAGE */
+.purchase-message{
+  padding:12px 14px;
+  margin-bottom:15px;
+
+  border-radius:15px;
+
+  background:rgba(66,232,138,.045);
+  border:1px solid rgba(66,232,138,.12);
+
+  color:#b8cfc2;
+  font-size:11px;
+  line-height:1.7;
+}
+
+/* EMPTY STATE */
+#purchasesEmpty,
+#historyEmpty{
+  padding:65px 25px !important;
+  text-align:center;
+}
+
+.empty-icon{
+  width:72px;
+  height:72px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin:0 auto 18px;
+
+  border-radius:22px;
+
+  background:rgba(255,215,0,.055);
+  border:1px solid rgba(255,215,0,.12);
+
+  font-size:34px;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.3);
+}
+
+#purchasesEmpty h2,
+#historyEmpty h2{
+  color:#fff !important;
+  font-size:21px;
+  font-weight:800;
+  margin:0 0 9px !important;
+}
+
+#purchasesEmpty p,
+#historyEmpty p{
+  color:#777 !important;
+  font-size:12px;
+  line-height:1.7;
+  max-width:280px;
+  margin:auto;
+}
+
+/* PREMIUM NOTE */
+.empty-note{
+  display:inline-block;
+
+  margin-top:17px;
+  padding:9px 13px;
+
+  border-radius:12px;
+
+  background:rgba(255,215,0,.045);
+  border:1px solid rgba(255,215,0,.1);
+
+  color:#999;
+  font-size:10px;
+}
+
+/* LOADING */
+#purchasesLoading,
+#historyLoading{
+  padding:50px 20px !important;
+  color:#777 !important;
+  font-size:12px;
+}
+
+/* ERROR */
+.premium-error{
+  padding:22px;
+
+  text-align:center;
+
+  border-radius:18px;
+
+  background:rgba(255,60,60,.045);
+  border:1px solid rgba(255,60,60,.12);
+
+  color:#ff6262;
+
+  font-size:12px;
+  line-height:1.8;
+}
+
+.premium-error small{
+  color:#666;
+  font-size:10px;
+}
+
+/* MOBILE */
+@media(max-width:480px){
+
+  .purchase-card,
+  .premium-order-card{
+    padding:17px;
+    border-radius:21px;
+  }
+
+  .purchase-title,
+  .order-account{
+    font-size:18px;
+  }
+
+  .purchase-price,
+  .order-amount{
+    font-size:25px;
+  }
+
+  .purchase-status,
+  .premium-status{
+    font-size:8px;
+    padding:6px 9px;
+  }
+
+  .order-details strong{
+    max-width:55%;
+  }
+
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Poppins,sans-serif;
+background:#05010a;
+color:#fff;
+overflow:hidden;
+}
+
+/* ---------- Pages ---------- */
+
+.page{
+position:fixed;
+inset:0;
+overflow:auto;
+background:#05010a;
+transition:opacity .25s ease;
+}
+
+.hidden{
+opacity:0;
+.hidden{
+  opacity:0;
+  pointer-events:none;
+}
+pointer-events:none;
+}
+
+.active{
+opacity:1;
+transform:none;
+pointer-events:auto;
+}
+
+/* ---------- Hero ---------- */
+
+.hero{
+height:100vh;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+.hero img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+transition:1s;
+}
+
+.hero img.show{
+opacity:1;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(#00000050,#000);
+}
+
+.content{
+position:relative;
+text-align:center;
+padding:20px;
+}
+
+.logo{
+width:90px;
+height:90px;
+border-radius:50%;
+box-shadow:0 0 30px gold;
+}
+
+.title{
+font-family:Bebas Neue;
+font-size:68px;
+color:#FFD700;
+text-shadow:0 0 20px gold;
+margin-top:20px;
+}
+
+.sub{
+color:#ddd;
+margin:10px 0 25px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+border:none;
+border-radius:40px;
+background:linear-gradient(90deg,#FFD700,#FF9900);
+color:#000;
+font-weight:bold;
+font-size:16px;
+box-shadow:0 0 25px gold;
+cursor:pointer;
+}
+
+/* ---------- Store ---------- */
+
+.topbar{
+position:sticky;
+top:0;
+padding:15px;
+background:#0b0b0b;
+display:flex;
+align-items:center;
+gap:10px;
+z-index:99;
+border-bottom:1px solid #333;
+}
+
+.back{
+background:#222;
+border:none;
+color:white;
+padding:10px 15px;
+border-radius:10px;
+}
+
+.store{
+padding:20px;
+padding-bottom:100px;
+}
+
+.heading{
+font-family:Bebas Neue;
+font-size:42px;
+color:#FFD700;
+margin-bottom:20px;
+}
+
+.search{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+.search input{
+flex:1;
+padding:14px;
+border:none;
+border-radius:12px;
+background:#111;
+color:white;
+}
+
+.card{
+background:#111;
+border-radius:24px;
+overflow:hidden;
+box-shadow:0 0 18px #7B2CFF;
+margin-bottom:22px;
+}
+
+.slider{
+  position:relative;
+  width:100%;
+  aspect-ratio:20/9;
+  overflow:hidden;
+  background:#000;
+}
+
+.slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:.4s;
+}
+
+.slide.show{
+  opacity:1;
+}
+
+.arrow{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:#0008;
+border:none;
+color:white;
+padding:10px;
+border-radius:10px;
+font-size:18px;
+}
+
+.left{left:10px}
+.right{right:10px}
+
+.info{
+padding:18px;
+}
+
+.price{
+font-size:32px;
+font-weight:bold;
+color:#FFD700;
+margin:10px 0;
+}
+
+.badge{
+display:inline-block;
+padding:8px 14px;
+border-radius:30px;
+background:#00D26A;
+color:black;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.buy{
+width:100%;
+padding:15px;
+border:none;
+border-radius:15px;
+background:linear-gradient(90deg,#FFD700,#FF9900);
+font-weight:bold;
+font-size:17px;
+}
+
+/* ---------- Payment ---------- */
+
+.paybox{
+padding:20px;
+padding-bottom:100px;
+}
+
+.paycard{
+background:#111;
+border-radius:25px;
+padding:20px;
+box-shadow:0 0 20px #7B2CFF;
+}
+
+.qr{
+width:100%;
+border-radius:18px;
+margin-bottom:20px;
+}
+
+.amount{
+font-size:42px;
+color:#FFD700;
+font-weight:bold;
+text-align:center;
+margin:15px 0;
+}
+
+.upi{
+width:100%;
+padding:15px;
+border:none;
+border-radius:15px;
+background:#FFD700;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.input{
+width:100%;
+padding:14px;
+margin-bottom:14px;
+border:none;
+border-radius:12px;
+background:#1b1b1b;
+color:white;
+}
+
+.submit{
+width:100%;
+padding:15px;
+border:none;
+border-radius:15px;
+background:linear-gradient(90deg,#FFD700,#FF9900);
+font-weight:bold;
+}
+
+.success{
+display:none;
+text-align:center;
+padding:40px 20px;
+}
+
+.tick{
+font-size:70px;
+color:#00D26A;
+}
+
+/* ---------- Submit Loading ---------- */
+
+.sending{
+display:none;
+text-align:center;
+padding:35px 20px;
+}
+
+.spinner{
+width:55px;
+height:55px;
+margin:0 auto 20px;
+border:5px solid #333;
+border-top:5px solid #FFD700;
+border-radius:50%;
+animation:spin .8s linear infinite;
+}
+
+.sending-title{
+font-size:22px;
+font-weight:bold;
+margin-bottom:8px;
+}
+
+.sending-text{
+font-size:16px;
+color:#ccc;
+}
+
+@keyframes spin{
+to{
+transform:rotate(360deg);
+}
+}
+
+/* ---------- Bottom ---------- */
+
+.bottom{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  padding:8px 12px;
+  background:#090909;
+  border-top:1px solid #333;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  z-index:9999;
+  transform:none !important;
+}
+
+.bottom-btn{
+  background:none;
+  border:none;
+  width:64px;
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+
+.bottom-btn img{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+  filter:drop-shadow(0 0 10px rgba(255,180,0,.6));
+  transition:.2s;
+}
+
+.bottom-btn:active img{
+  transform:scale(.92);
+}
+
+.account-input{
+height:56px;
+font-size:16px;
+border:1px solid #333;
+border-radius:16px;
+background:#181818;
+padding:0 18px;
+margin-bottom:16px;
+}
+
+.account-input:focus{
+outline:none;
+border-color:#FFD700;
+box-shadow:0 0 12px rgba(255,215,0,.35);
+}
+
+.account-btn{
+width:100%;
+height:56px;
+border:none;
+border-radius:16px;
+font-size:16px;
+font-weight:700;
+margin-top:12px;
+cursor:pointer;
+transition:.25s;
+}
+
+.create-btn{
+background:linear-gradient(90deg,#FFD700,#FF9800);
+color:#000;
+box-shadow:0 0 18px rgba(255,215,0,.35);
+}
+
+.login-btn{
+background:#232323;
+color:#fff;
+border:1px solid #FFD700;
+}
+
+.logout-btn{
+background:#2a1111;
+color:#ff5252;
+border:1px solid #ff5252;
+}
+
+.account-btn:active{
+transform:scale(.97);
+}
+
+.menu-card{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#151515;
+border:1px solid #2b2b2b;
+border-radius:18px;
+padding:16px;
+margin-top:14px;
+cursor:pointer;
+transition:.25s;
+}
+
+.menu-card:hover{
+border-color:#FFD700;
+box-shadow:0 0 12px rgba(255,215,0,.25);
+}
+
+.menu-card h4{
+margin:0;
+font-size:16px;
+color:#fff;
+}
+
+.menu-card p{
+margin:2px 0 0;
+font-size:12px;
+color:#999;
+}
+
+.top-account{
+  width:160px;
+  height:82px;
+  border:none;
+  background:none;
+  padding:0;
+  border-radius:22px;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.top-account img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* =========================================
+   PREMIUM POPUP SYSTEM
+========================================= */
+
+.premium-popup-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.72);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:22px;
+  z-index:99999;
+  opacity:0;
+  pointer-events:none;
+  transition:.25s ease;
+}
+
+.premium-popup-overlay.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.premium-popup{
+  width:100%;
+  max-width:390px;
+  background:linear-gradient(
+    145deg,
+    #151515,
+    #080808
+  );
+  border:1px solid var(--popup-color);
+  border-radius:26px;
+  padding:28px 22px 22px;
+  text-align:center;
+  box-shadow:
+    0 0 25px var(--popup-glow),
+    0 20px 60px rgba(0,0,0,.65);
+  transform:scale(.88) translateY(20px);
+  transition:.3s ease;
+}
+
+.premium-popup-overlay.show .premium-popup{
+  transform:scale(1) translateY(0);
+}
+
+.popup-icon{
+  width:72px;
+  height:72px;
+  margin:0 auto 18px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:36px;
+  font-weight:900;
+  color:var(--popup-color);
+  background:var(--popup-bg);
+  border:2px solid var(--popup-color);
+  box-shadow:
+    0 0 20px var(--popup-glow),
+    inset 0 0 15px var(--popup-glow);
+}
+
+.popup-title{
+  color:#fff;
+  font-size:23px;
+  font-weight:700;
+  margin-bottom:9px;
+}
+
+.popup-message{
+  color:#bdbdbd;
+  font-size:14px;
+  line-height:1.6;
+  margin-bottom:22px;
+}
+
+.popup-button{
+  width:100%;
+  height:52px;
+  border:none;
+  border-radius:15px;
+  background:var(--popup-color);
+  color:#050505;
+  font-size:15px;
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:0 0 20px var(--popup-glow);
+  transition:.2s;
+}
+
+.popup-button:active{
+  transform:scale(.97);
+}
+
+/* SUCCESS */
+.popup-success{
+  --popup-color:#00e676;
+  --popup-glow:rgba(0,230,118,.38);
+  --popup-bg:rgba(0,230,118,.10);
+}
+
+/* INFO */
+.popup-info{
+  --popup-color:#00c8ff;
+  --popup-glow:rgba(0,200,255,.38);
+  --popup-bg:rgba(0,200,255,.10);
+}
+
+/* ACCOUNT */
+.popup-account{
+  --popup-color:#b56cff;
+  --popup-glow:rgba(181,108,255,.40);
+  --popup-bg:rgba(181,108,255,.10);
+}
+
+/* WARNING */
+.popup-warning{
+  --popup-color:#ffd000;
+  --popup-glow:rgba(255,208,0,.40);
+  --popup-bg:rgba(255,208,0,.10);
+}
+
+/* ERROR */
+.popup-error{
+  --popup-color:#ff3b4f;
+  --popup-glow:rgba(255,59,79,.40);
+  --popup-bg:rgba(255,59,79,.10);
+}
+
+/* LOGOUT */
+.popup-logout{
+  --popup-color:#ff8a00;
+  --popup-glow:rgba(255,138,0,.40);
+  --popup-bg:rgba(255,138,0,.10);
+}
+
+@media(max-width:420px){
+  .premium-popup{
+    padding:25px 18px 18px;
+    border-radius:23px;
+  }
+
+  .popup-icon{
+    width:66px;
+    height:66px;
+    font-size:32px;
+  }
+
+  .popup-title{
+    font-size:21px;
+  }
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- STORE -->
+
+
+
+
+
+<!-- STORE -->
+
+<div id="storePage" class="page active">
+
+<div class="topbar">
+
+  <button class="back" onclick="goHome()">←</button>
+
+  <h3 style="flex:1;">Store</h3>
+
+  <button class="top-account" onclick="openAccount()">
+  <img src="assets/top-account-logo.png" alt="Account">
+</button>
+
+</div>
+
+<div class="store">
+
+<div class="heading">Featured IDs</div>
+
+<!-- FF ID #511 -->
+
+<div class="card">
+  <div class="slider">
+
+    <img src="posts/ff511/1.png" class="slide show">
+    <img src="posts/ff511/2.png" class="slide">
+    <img src="posts/ff511/3.png" class="slide">
+    <img src="posts/ff511/4.png" class="slide">
+    <img src="posts/ff511/5.png" class="slide">
+    <img src="posts/ff511/6.png" class="slide">
+    <img src="posts/ff511/7.png" class="slide">
+    <img src="posts/ff511/8.png" class="slide">
+    <img src="posts/ff511/9.png" class="slide">
+    <img src="posts/ff511/10.png" class="slide">
+    <img src="posts/ff511/11.png" class="slide">
+    <img src="posts/ff511/12.png" class="slide">
+
+    <button class="arrow left">❮</button>
+    <button class="arrow right">❯</button>
+
+  </div>
+
+  <div class="info">
+
+    <h2>FF ID #511</h2>
+
+    <div class="price">₹599</div>
+
+    
+
+    <div class="badge" style="background:#ff3b30;color:white;">
+  SOLD OUT
+</div>
+
+    <button class="buy" disabled
+style="background:#555;color:#fff;cursor:not-allowed;">
+  SOLD OUT
+</button>
+
+  </div>
+</div>
+
+
+
+<div class="card">
+  <div class="slider">
+  <img src="posts/ff512/1.png" class="slide show">
+  <img src="posts/ff512/2.png" class="slide">
+  <img src="posts/ff512/3.png" class="slide">
+  <img src="posts/ff512/4.png" class="slide">
+  <img src="posts/ff512/5.png" class="slide">
+  <img src="posts/ff512/6.png" class="slide">
+  <img src="posts/ff512/7.png" class="slide">
+  <img src="posts/ff512/8.png" class="slide">
+  <img src="posts/ff512/9.png" class="slide">
+  <img src="posts/ff512/10.png" class="slide">
+  <img src="posts/ff512/11.png" class="slide">
+  <img src="posts/ff512/12.png" class="slide">
+
+  <button class="arrow left">❮</button>
+  <button class="arrow right">❯</button>
+</div>
+
+<div class="info">
+
+<div class="quick-profile">
+
+  <!-- ID + AVAILABLE -->
+
+  <div class="quick-head">
+
+    <span class="quick-id">
+      ID: FF #512
+    </span>
+
+    <span class="quick-status">
+      <span class="quick-dot"></span>
+      AVAILABLE
+    </span>
+
+  </div>
+
+
+  <!-- PRICE -->
+
+  <div class="quick-price">
+
+    <span>PRICE</span>
+
+    <strong>₹4999</strong>
+
+  </div>
+
+
+  <!-- DETAILS -->
+
+  <div class="quick-grid">
+
+    <div class="quick-item level">
+      <span>🎮 LEVEL</span>
+      <b>77</b>
+    </div>
+
+
+    <div class="quick-item likes">
+      <span>❤️ LIKES</span>
+      <b>10k</b>
+    </div>
+
+
+    <div class="quick-item old">
+      <span>🕐 OLD</span>
+      <b>...</b>
+    </div>
+
+
+    <div class="quick-item evo">
+      <span>🔥 EVO GUNS</span>
+      <b>4</b>
+    </div>
+
+
+    <div class="quick-item prime">
+      <span>🎁 PRIME</span>
+      <b>...</b>
+    </div>
+
+
+    <div class="quick-item emotes">
+      <span>🎭 EMOTES</span>
+      <b>...</b>
+    </div>
+
+  </div>
+
+
+  <!-- BUY -->
+
+  <button
+    class="buy"
+    onclick="buyNow('FF ID #512',4999)">
+    Buy Now
+  </button>
+
+</div>
+
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="slider">
+
+<img src="posts/ff513/1.png" class="slide show">
+<img src="posts/ff513/2.png" class="slide">
+<img src="posts/ff513/3.png" class="slide">
+<img src="posts/ff513/4.png" class="slide">
+<img src="posts/ff513/5.png" class="slide">
+<img src="posts/ff513/6.png" class="slide">
+<img src="posts/ff513/7.png" class="slide">
+<img src="posts/ff513/8.png" class="slide">
+<img src="posts/ff513/9.png" class="slide">
+<img src="posts/ff513/10.png" class="slide">
+<img src="posts/ff513/11.png" class="slide">
+<img src="posts/ff513/12.png" class="slide">
+<img src="posts/ff513/13.png" class="slide">
+<img src="posts/ff513/14.png" class="slide">
+<img src="posts/ff513/15.png" class="slide">
+<img src="posts/ff513/16.png" class="slide">
+<img src="posts/ff513/17.png" class="slide">
+<img src="posts/ff513/18.png" class="slide">
+<img src="posts/ff513/19.png" class="slide">
+
+<button class="arrow left">❮</button>
+
+<button class="arrow right">❯</button>
+
+</div>
+
+<div class="info">
+
+<h2>FF ID #513</h2>
+
+<div class="price">₹3999</div>
+
+
+
+<div class="badge live-badge">
+  <span class="live-dot"></span>
+  AVAILABLE
+</div>
+
+<button class="buy" onclick="buyNow('FF ID #513',3999)">Buy Now</button>
+
+</div>
+</div>
+
+<div class="card">
+  <div class="slider">
+    <img src="posts/ff514/1.png" class="slide show">
+    <img src="posts/ff514/2.png" class="slide">
+    <img src="posts/ff514/3.png" class="slide">
+    <img src="posts/ff514/4.png" class="slide">
+    <img src="posts/ff514/5.png" class="slide">
+    <img src="posts/ff514/6.png" class="slide">
+    <img src="posts/ff514/7.png" class="slide">
+    <img src="posts/ff514/8.png" class="slide">
+    <img src="posts/ff514/9.png" class="slide">
+    <img src="posts/ff514/10.png" class="slide">
+    <img src="posts/ff514/11.png" class="slide">
+    <img src="posts/ff514/12.png" class="slide">
+    <img src="posts/ff514/13.png" class="slide">
+    <img src="posts/ff514/14.png" class="slide">
+    <img src="posts/ff514/15.png" class="slide">
+    <img src="posts/ff514/16.png" class="slide">
+
+    <button class="arrow left">❮</button>
+    <button class="arrow right">❯</button>
+  </div>
+
+  <div class="info">
+    <h2>FF ID #514</h2>
+    <div class="price">₹1799</div>
+    
+    <div class="badge live-badge">
+  <span class="live-dot"></span>
+  AVAILABLE
+</div>
+    <!-- FF514 -->
+<button class="buy" onclick="buyNow('FF ID #514',1799)">
+  Buy Now
+</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="slider">
+    <img src="posts/ff515/1.png" class="slide show">
+    <img src="posts/ff515/2.png" class="slide">
+    <img src="posts/ff515/3.png" class="slide">
+    <img src="posts/ff515/4.png" class="slide">
+    <img src="posts/ff515/5.png" class="slide">
+    <img src="posts/ff515/6.png" class="slide">
+    <img src="posts/ff515/7.png" class="slide">
+    <img src="posts/ff515/8.png" class="slide">
+    <img src="posts/ff515/9.png" class="slide">
+    <img src="posts/ff515/10.png" class="slide">
+    <img src="posts/ff515/11.png" class="slide">
+    <img src="posts/ff515/12.png" class="slide">
+
+    <button class="arrow left">❮</button>
+    <button class="arrow right">❯</button>
+  </div>
+
+  <div class="info">
+    <h2>FF ID #515</h2>
+    <div class="price">₹1200</div>
+    
+
+    <div class="badge live-badge">
+  <span class="live-dot"></span>
+  AVAILABLE
+</div>
+
+    <button class="buy" onclick="buyNow('FF ID #515',1200)">
+      Buy Now
+    </button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="slider">
+    <img src="posts/ff516/1.png" class="slide show">
+    <img src="posts/ff516/2.png" class="slide">
+    <img src="posts/ff516/3.png" class="slide">
+    <img src="posts/ff516/4.png" class="slide">
+    <img src="posts/ff516/5.png" class="slide">
+    <img src="posts/ff516/6.png" class="slide">
+    <img src="posts/ff516/7.png" class="slide">
+    <img src="posts/ff516/8.png" class="slide">
+    <img src="posts/ff516/9.png" class="slide">
+    <img src="posts/ff516/10.png" class="slide">
+    <img src="posts/ff516/11.png" class="slide">
+    <img src="posts/ff516/12.png" class="slide">
+
+    <button class="arrow left">❮</button>
+    <button class="arrow right">❯</button>
+  </div>
+
+  <div class="info">
+    <h2>FF ID #516</h2>
+    <div class="price">₹2799</div>
+    
+    <div class="badge live-badge">
+  <span class="live-dot"></span>
+  AVAILABLE
+</div>
+
+    <button class="buy" onclick="buyNow('FF ID #516',2799)">
+      Buy Now
+    </button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="slider">
+    <img src="posts/ff517/1.png" class="slide show"><img src="posts/ff517/2.png" class="slide"><img src="posts/ff517/3.png" class="slide"><img src="posts/ff517/4.png" class="slide"><img src="posts/ff517/5.png" class="slide"><img src="posts/ff517/6.png" class="slide"><img src="posts/ff517/7.png" class="slide"><img src="posts/ff517/8.png" class="slide"><img src="posts/ff517/9.png" class="slide"><img src="posts/ff517/10.png" class="slide"><img src="posts/ff517/11.png" class="slide"><img src="posts/ff517/12.png" class="slide">
+    <button class="arrow left">❮</button><button class="arrow right">❯</button>
+  </div>
+  <div class="info"><h2>FF ID #517</h2><div class="price">₹1599</div>
+  <div class="badge live-badge">
+  <span class="live-dot"></span>
+  AVAILABLE
+</div><button class="buy" onclick="buyNow('FF ID #517',1599)">Buy Now</button></div>
+</div>
+
+<div class="card">
+  <div class="slider">
+    <img src="posts/ff518/1.png" class="slide show"><img src="posts/ff518/2.png" class="slide"><img src="posts/ff518/3.png" class="slide"><img src="posts/ff518/4.png" class="slide"><img src="posts/ff518/5.png" class="slide"><img src="posts/ff518/6.png" class="slide"><img src="posts/ff518/7.png" class="slide"><img src="posts/ff518/8.png" class="slide"><img src="posts/ff518/9.png" class="slide"><img src="posts/ff518/10.png" class="slide"><img src="posts/ff518/11.png" class="slide"><img src="posts/ff518/12.png" class="slide">
+    <button class="arrow left">❮</button><button class="arrow right">❯</button>
+  </div>
+  <div class="info"><h2>FF ID #518</h2><div class="price">₹1999</div>
+  <div class="badge live-badge">
+  <span class="live-dot"></span>
+  AVAILABLE
+</div><button class="buy" onclick="buyNow('FF ID #518',1999)">Buy Now</button></div>
+</div>
+
+<div class="card">
+<div class="slider">
+  <img src="posts/ff519/1.png" class="slide show">
+  <img src="posts/ff519/2.png" class="slide">
+  <img src="posts/ff519/3.png" class="slide">
+  <img src="posts/ff519/4.png" class="slide">
+  <img src="posts/ff519/5.png" class="slide">
+  <img src="posts/ff519/6.png" class="slide">
+  <img src="posts/ff519/7.png" class="slide">
+  <img src="posts/ff519/8.png" class="slide">
+  <img src="posts/ff519/9.png" class="slide">
+  <img src="posts/ff519/10.png" class="slide">
+  <img src="posts/ff519/11.png" class="slide">
+  <img src="posts/ff519/12.png" class="slide">
+  <img src="posts/ff519/13.png" class="slide">
+  <img src="posts/ff519/14.png" class="slide">
+  <img src="posts/ff519/15.png" class="slide">
+  <img src="posts/ff519/16.png" class="slide">
+
+  <button class="arrow left">❮</button>
+  <button class="arrow right">❯</button>
+</div>
+  <div class="info"><h2>FF ID #519</h2><div class="price">₹2299</div>
+  <div class="badge live-badge">
+  <span class="live-dot"></span>
+  AVAILABLE
+</div><button class="buy" onclick="buyNow('FF ID #519',2299)">Buy Now</button></div>
+</div>
+
+<div class="card">
+  <div class="slider">
+    <img src="posts/ff520/1.png" class="slide show"><img src="posts/ff520/2.png" class="slide"><img src="posts/ff520/3.png" class="slide"><img src="posts/ff520/4.png" class="slide"><img src="posts/ff520/5.png" class="slide"><img src="posts/ff520/6.png" class="slide"><img src="posts/ff520/7.png" class="slide"><img src="posts/ff520/8.png" class="slide"><img src="posts/ff520/9.png" class="slide"><img src="posts/ff520/10.png" class="slide"><img src="posts/ff520/11.png" class="slide"><img src="posts/ff520/12.png" class="slide">
+    <button class="arrow left">❮</button><button class="arrow right">❯</button>
+  </div>
+  <div class="info"><h2>FF ID #520</h2><div class="price">₹999</div><div class="badge live-badge">
+  <span class="live-dot"></span>
+  AVAILABLE
+</div><button class="buy" onclick="buyNow('FF ID #520',999)">Buy Now</button></div>
+</div>
+
+<div class="card">
+  <div class="slider">
+
+    <img src="posts/ff521/1.png" class="slide show">
+    <img src="posts/ff521/2.png" class="slide">
+    <img src="posts/ff521/3.png" class="slide">
+    <img src="posts/ff521/4.png" class="slide">
+    <img src="posts/ff521/5.png" class="slide">
+    <img src="posts/ff521/6.png" class="slide">
+    <img src="posts/ff521/7.png" class="slide">
+    <img src="posts/ff521/8.png" class="slide">
+    <img src="posts/ff521/9.png" class="slide">
+    <img src="posts/ff521/10.png" class="slide">
+    <img src="posts/ff521/11.png" class="slide">
+    <img src="posts/ff521/12.png" class="slide">
+    <img src="posts/ff521/13.png" class="slide">
+    <img src="posts/ff521/14.png" class="slide">
+    <img src="posts/ff521/15.png" class="slide">
+    <img src="posts/ff521/16.png" class="slide">
+
+    <button class="arrow left">❮</button>
+    <button class="arrow right">❯</button>
+
+  </div>
+
+  <div class="info">
+
+    <h2>FF ID #521</h2>
+
+    <div class="price">₹3499</div>
+
+    
+
+    <div class="badge live-badge">
+  <span class="live-dot"></span>
+  AVAILABLE
+</div>
+
+    <button class="buy" onclick="buyNow('FF ID #521',3499)">
+      Buy Now
+    </button>
+
+  </div>
+</div>
+
+<div class="card">
+  <div class="slider">
+    <img src="posts/ff522/1.png" class="slide show">
+    <img src="posts/ff522/2.png" class="slide">
+    <img src="posts/ff522/3.png" class="slide">
+    <img src="posts/ff522/4.png" class="slide">
+    <img src="posts/ff522/5.png" class="slide">
+    <img src="posts/ff522/6.png" class="slide">
+    <img src="posts/ff522/7.png" class="slide">
+    <img src="posts/ff522/8.png" class="slide">
+    <img src="posts/ff522/9.png" class="slide">
+    <img src="posts/ff522/10.png" class="slide">
+    <img src="posts/ff522/11.png" class="slide">
+    <img src="posts/ff522/12.png" class="slide">
+
+    <button class="arrow left">❮</button>
+    <button class="arrow right">❯</button>
+  </div>
+
+  <div class="info">
+    <h2>FF ID #522</h2>
+    <div class="price">₹2399</div>
+    
+    <div class="badge live-badge">
+  <span class="live-dot"></span>
+  AVAILABLE
+</div>
+
+    <button class="buy" onclick="buyNow('FF ID #522',2399)">
+      Buy Now
+    </button>
+  </div>
+</div>
+
+<!-- FF #523 -->
+<div class="card">
+  <div class="slider">
+
+    <img src="posts/ff523/1.png" class="slide show">
+    <img src="posts/ff523/2.png" class="slide">
+    <img src="posts/ff523/3.png" class="slide">
+    <img src="posts/ff523/4.png" class="slide">
+    <img src="posts/ff523/5.png" class="slide">
+    <img src="posts/ff523/6.png" class="slide">
+    <img src="posts/ff523/7.png" class="slide">
+    <img src="posts/ff523/8.png" class="slide">
+    <img src="posts/ff523/9.png" class="slide">
+    <img src="posts/ff523/10.png" class="slide">
+    <img src="posts/ff523/11.png" class="slide">
+    <img src="posts/ff523/12.png" class="slide">
+
+    <button class="arrow left">❮</button>
+    <button class="arrow right">❯</button>
+
+  </div>
+
+  <div class="info">
+    <h2>FF ID #523</h2>
+    <div class="price">₹999</div>
+
+    <div class="badge live-badge">
+      <span class="live-dot"></span>
+      AVAILABLE
+    </div>
+
+    <button class="buy" onclick="buyNow('FF ID #523',999)">
+      Buy Now
+    </button>
+  </div>
+</div>
+
+
+<!-- FF #524 -->
+<div class="card">
+  <div class="slider">
+
+    <img src="posts/ff524/1.png" class="slide show">
+    <img src="posts/ff524/2.png" class="slide">
+    <img src="posts/ff524/3.png" class="slide">
+    <img src="posts/ff524/4.png" class="slide">
+    <img src="posts/ff524/5.png" class="slide">
+    <img src="posts/ff524/6.png" class="slide">
+    <img src="posts/ff524/7.png" class="slide">
+    <img src="posts/ff524/8.png" class="slide">
+    <img src="posts/ff524/9.png" class="slide">
+    <img src="posts/ff524/10.png" class="slide">
+    <img src="posts/ff524/11.png" class="slide">
+    <img src="posts/ff524/12.png" class="slide">
+    <img src="posts/ff524/13.png" class="slide">
+
+    <button class="arrow left">❮</button>
+    <button class="arrow right">❯</button>
+
+  </div>
+
+  <div class="info">
+    <h2>FF ID #524</h2>
+    <div class="price">₹899</div>
+
+    <div class="badge live-badge">
+      <span class="live-dot"></span>
+      AVAILABLE
+    </div>
+
+    <button class="buy" onclick="buyNow('FF ID #524',899)">
+      Buy Now
+    </button>
+  </div>
+</div>
+
+  <!-- FF #525 -->
+<div class="card">
+  <div class="slider">
+
+    <img src="posts/ff525/1.png" class="slide show">
+    <img src="posts/ff525/2.png" class="slide">
+    <img src="posts/ff525/3.png" class="slide">
+    <img src="posts/ff525/4.png" class="slide">
+    <img src="posts/ff525/5.png" class="slide">
+    <img src="posts/ff525/6.png" class="slide">
+    <img src="posts/ff525/7.png" class="slide">
+    <img src="posts/ff525/8.png" class="slide">
+    <img src="posts/ff525/9.png" class="slide">
+    <img src="posts/ff525/10.png" class="slide">
+    <img src="posts/ff525/11.png" class="slide">
+    <img src="posts/ff525/12.png" class="slide">
+    <img src="posts/ff525/13.png" class="slide">
+    <img src="posts/ff525/14.png" class="slide">
+
+    <button class="arrow left">❮</button>
+    <button class="arrow right">❯</button>
+
+  </div>
+
+  <div class="info">
+    <h2>FF ID #525</h2>
+    <div class="price">₹3000</div>
+
+    <div class="badge live-badge">
+      <span class="live-dot"></span>
+      AVAILABLE
+    </div>
+
+    <button class="buy" onclick="buyNow('FF ID #525',3000)">
+      Buy Now
+    </button>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+
+<section class="how-section" id="how">
+
+  <div class="section-title">
+    <span class="eyebrow">SIMPLE PROCESS</span>
+    <h2>How It Works</h2>
+  </div>
+
+  <div class="steps">
+
+    <div class="step">
+
+      <div>01</div>
+
+      <h3>Choose</h3>
+
+      <p>
+        Find the FF ID you want from our available listings.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <div>02</div>
+
+      <h3>Pay</h3>
+
+      <p>
+        Pay the exact listing amount using UPI,
+        PhonePe or Google Pay.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <div>03</div>
+
+      <h3>Verify</h3>
+
+      <p>
+        Submit your UTR, WhatsApp number and
+        payment screenshot.
+      </p>
+
+    </div>
+
+
+    <div class="step">
+
+      <div>04</div>
+
+      <h3>Transfer</h3>
+
+      <p>
+        After payment verification, the FF ID
+        transfer details are handled manually.
+      </p>
+
+    </div>
+
+  </div>
+
+<!-- STORE FOOTER -->
+
+<footer class="site-footer">
+
+  <div class="footer-brand">
+    <span>SUMIT</span><strong>FF STORE</strong>
+  </div>
+
+  <div class="footer-links">
+
+    <button onclick="goHome()">
+      Home
+    </button>
+
+    <button onclick="goListings()">
+      Listings
+    </button>
+
+    <button onclick="scrollHow()">
+      How It Works
+    </button>
+
+    <button onclick="openTerms()">
+      Terms &amp; Conditions
+    </button>
+
+  </div>
+
+  <div class="footer-line"></div>
+
+  <p class="footer-copy">
+    © 2026 Sumit FF Store. All Rights Reserved.
+  </p>
+
+</footer>
+
+</section>
+
+</div> <!-- store -->
+</div> <!-- storePage -->
+
+<!-- ACCOUNT PAGE -->
+
+<div id="accountPage" class="page hidden">
+
+  <div class="topbar">
+    <button class="back" onclick="openStore()">←</button>
+    <h3 style="flex:1;">Account</h3>
+  </div>
+
+  <div class="paybox">
+
+    <div class="paycard">
+
+
+      <div style="text-align:center;margin-bottom:20px;">
+        <img src="assets/account-logo.png"
+     alt="Account Logo"
+     style="width:90px;height:90px;border-radius:50%;object-fit:cover;
+     margin:auto;display:block;border:3px solid #FFD700;
+     box-shadow:0 0 25px gold;">
+
+        <h2 style="margin-top:15px;">Sumit FF Store</h2>
+        <p style="color:#aaa;">Login or Create Account</p>
+      </div>
+
+
+      <input
+  id="accEmail"
+  class="input account-input"
+  type="email"
+  inputmode="email"
+  placeholder="✉️ Enter Email Address"
+>
+
+<input
+  id="accPassword"
+  class="input account-input"
+  type="password"
+  placeholder="🔒 Password"
+>
+
+<button
+  id="createBtn"
+  class="account-btn create-btn"
+  onclick="registerUser()"
+>
+  CREATE ACCOUNT
+</button>
+
+<button
+  id="loginBtn"
+  class="account-btn login-btn"
+  onclick="loginUser()"
+>
+  LOGIN
+</button>
+
+<button
+  id="logoutBtn"
+  class="account-btn logout-btn"
+  style="display:none;"
+  onclick="logoutUser()"
+>
+  LOGOUT
+</button>
+
+<div id="accountMenu" style="display:none;margin-top:18px;">
+
+  <div class="menu-card" onclick="openPurchases()">
+    <span>🛒</span>
+    <div>
+      <h4>My Purchases</h4>
+      <p>Purchased FF IDs</p>
+    </div>
+    <span>›</span>
+  </div>
+
+  <div class="menu-card" onclick="openHistory()">
+    <span>📜</span>
+    <div>
+      <h4>History</h4>
+      <p>All payment history</p>
+    </div>
+    <span>›</span>
+  </div> <!-- menu-card -->
+
+</div> <!-- accountMenu -->
+
+</div> <!-- paycard -->
+
+</div> <!-- paybox -->
+
+</div> <!-- accountPage -->
+
+<div id="purchasesPage" class="page hidden">
+
+  <div class="topbar">
+
+    <button class="back" onclick="openAccount()">←</button>
+
+    <h3 style="flex:1;">My Purchases</h3>
+
+  </div>
+
+  <div class="paybox">
+
+    <div id="purchasesLoading"
+         style="text-align:center;padding:30px;color:#aaa;">
+      Loading purchases...
+    </div>
+
+    <div id="purchasesEmpty"
+         style="display:none;text-align:center;padding:50px 20px;color:#aaa;">
+
+      <div style="font-size:55px;">🛒</div>
+
+      <h2 style="color:#fff;margin:15px 0 8px;">
+        No Purchases Yet
+      </h2>
+
+      <p>Your purchased FF IDs will appear here.</p>
+
+    </div>
+
+    <div id="purchasesList"></div>
+
+  </div>
+
+</div>
+
+<!-- HISTORY PAGE -->
+
+<div id="historyPage" class="page hidden">
+
+  <div class="topbar">
+
+    <button
+      class="back"
+      onclick="openAccount()">
+      ←
+    </button>
+
+    <h3 style="flex:1;">
+      Order History
+    </h3>
+
+  </div>
+
+  <div class="paybox">
+
+    <div
+      id="historyLoading"
+      class="premium-loading">
+
+      <div class="mini-spinner"></div>
+
+      Loading order history...
+
+    </div>
+
+
+    <div
+      id="historyEmpty"
+      style="display:none;"
+      class="premium-empty">
+
+      <div class="empty-icon">
+        📜
+      </div>
+
+      <h2>
+        No Order History
+      </h2>
+
+      <p>
+        Your payment activity will appear here.
+      </p>
+
+    </div>
+
+
+    <div id="historyList"></div>
+
+  </div>
+
+</div>
+
+<!-- PAYMENT -->
+
+<!-- PAYMENT -->
+
+<div id="paymentPage" class="page hidden">
+
+<div class="topbar">
+
+<button class="back" onclick="openStore()">←</button>
+
+<h3>Payment</h3>
+
+</div>
+
+<div class="paybox">
+
+<div class="paycard">
+
+<div id="paymentQR">
+  <img src="assets/qr.png" class="qr">
+</div>
+
+<div id="paymentUpiBox" class="upi-info-box">
+
+  <div class="upi-label">
+    PAYMENT UPI ID
+  </div>
+
+  <div class="upi-row">
+
+    <span id="paymentUpiId">
+      jaiswara@fam
+    </span>
+
+    <button
+      type="button"
+      class="upi-copy-btn"
+      onclick="copyUPI()">
+      COPY
+    </button>
+
+  </div>
+
+  <div class="upi-note">
+    For payments above ₹2,000, please make the payment directly to the UPI ID above.
+  </div>
+
+</div>
+
+<h2 id="payTitle">FF ID</h2>
+
+<div class="amount" id="payAmount">₹4999</div>
+
+<button class="upi" onclick="payUPI()">👉🏻 Tap to Pay 👈🏻</button>
+
+<!-- AFTER PAYMENT -->
+
+<div class="after-payment-title">
+  <span></span>
+  AFTER PAYMENT
+  <span></span>
+</div>
+
+<div class="payment-field">
+
+  <label>
+    Mobile / WhatsApp Number
+  </label>
+
+  <input
+    id="phone"
+    class="payment-input"
+    type="tel"
+    inputmode="numeric"
+    maxlength="10"
+    placeholder="Enter Your WhatsApp Number"
+    required
+  >
+
+</div>
+
+
+<div class="payment-field">
+
+  <label>
+    UTR / Transaction ID
+  </label>
+
+  <input
+    id="utr"
+    class="payment-input"
+    type="text"
+    inputmode="numeric"
+    maxlength="12"
+    placeholder="Enter UTR / Transaction ID"
+    required
+  >
+
+</div>
+
+
+<div class="payment-field">
+
+  <label>
+    Payment Screenshot
+  </label>
+
+  <label
+    for="shot"
+    class="screenshot-upload">
+
+    <span>📸</span>
+    Select payment screenshot
+
+  </label>
+
+  <input
+    id="shot"
+    type="file"
+    accept="image/*"
+    hidden
+  >
+
+</div>
+
+
+<button
+  id="submitBtn"
+  class="submit-payment-btn"
+  onclick="submitOrder()">
+
+  Submit
+
+</button>
+
+
+<div class="payment-note">
+  Your payment details will be sent for manual verification.
+</div>
+
+<div class="sending" id="sending">
+
+  <div class="spinner"></div>
+
+  <div class="sending-title" id="sendingTitle">
+    Sending...
+  </div>
+
+  <div class="sending-text" id="sendingText">
+    Please wait while your submission is being sent.
+  </div>
+
+</div>
+
+<div class="success" id="success">
+
+  <div class="tick">✔</div>
+
+  <h2>Payment Submitted</h2>
+
+  <p>Id will be delivered after verification.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- Bottom -->
+
+<div class="bottom">
+  <button class="bottom-btn" onclick="openStore()">
+    <img src="assets/bottom-game.png" alt="Store">
+  </button>
+
+  <button class="bottom-btn" onclick="window.open('https://t.me/+fo0iNq5tykw3NWM1')">
+    <img src="assets/bottom-telegram.png" alt="Telegram">
+  </button>
+</div>
+
+<script type="module">
+
+import {
+  auth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged
+} from "./firebase.js";
+
+// =========================================
+// PREMIUM POPUP SYSTEM
+// =========================================
+
+window.showPopup = function(
+  title,
+  message,
+  type = "info",
+  icon = "✓"
+){
+
+  const oldPopup =
+    document.getElementById("premiumPopupOverlay");
+
+  if(oldPopup){
+    oldPopup.remove();
+  }
+
+  const overlay =
+    document.createElement("div");
+
+  overlay.id =
+    "premiumPopupOverlay";
+
+  overlay.className =
+    "premium-popup-overlay";
+
+  overlay.innerHTML = `
+    <div class="premium-popup popup-${type}">
+
+      <div class="popup-icon">
+        ${icon}
+      </div>
+
+      <div class="popup-title">
+        ${title}
+      </div>
+
+      <div class="popup-message">
+        ${message}
+      </div>
+
+      <button class="popup-button">
+        CONTINUE
+      </button>
+
+    </div>
+  `;
+
+  document.body.appendChild(overlay);
+
+  requestAnimationFrame(() => {
+    overlay.classList.add("show");
+  });
+
+  const button =
+    overlay.querySelector(".popup-button");
+
+  function closePopup(){
+
+    overlay.classList.remove("show");
+
+    setTimeout(() => {
+      overlay.remove();
+    }, 250);
+
+  }
+
+  button.onclick = closePopup;
+
+  overlay.addEventListener("click", (e) => {
+
+    if(e.target === overlay){
+      closePopup();
+    }
+
+  });
+
+};
+
+// ===============================
+// BUY NOW - GUARANTEED
+// ===============================
+
+window.buyNow = function(name, price) {
+
+  const paymentPage =
+    document.getElementById("paymentPage");
+
+  const storePage =
+    document.getElementById("storePage");
+
+  const payTitle =
+    document.getElementById("payTitle");
+
+  const payAmount =
+    document.getElementById("payAmount");
+
+  if (payTitle) {
+    payTitle.innerText = name;
+  }
+
+  if (payAmount) {
+    payAmount.innerText = "₹" + price;
+  }
+
+  window.currentID = name;
+  window.currentPrice = price;
+
+  if (storePage) {
+    storePage.classList.remove("active");
+    storePage.classList.add("hidden");
+  }
+
+  if (paymentPage) {
+    paymentPage.classList.remove("hidden");
+    paymentPage.classList.add("active");
+  }
+
+  window.scrollTo(0, 0);
+};
+
+window.registerUser = async function () {
+
+  const email =
+    document.getElementById("accEmail")?.value.trim();
+
+  const password =
+    document.getElementById("accPassword")?.value.trim();
+
+
+  if (!email || !password) {
+
+    showPopup(
+      "Details Required",
+      "Please enter your email address and password.",
+      "warning",
+      "!"
+    );
+
+    return;
+  }
+
+
+  try {
+
+    await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+
+
+    showPopup(
+      "Account Created",
+      "Your Sumit FF Store account has been created successfully.",
+      "account",
+      "✓"
+    );
+
+
+    setTimeout(() => {
+      openStore();
+    }, 800);
+
+
+  } catch (e) {
+
+    console.error(e);
+
+
+    if (
+      e.code === "auth/email-already-in-use"
+    ) {
+
+      showPopup(
+        "Account Already Exists",
+        "An account with this email already exists. Please log in to continue.",
+        "info",
+        "👤"
+      );
+
+      return;
+    }
+
+
+    if (
+      e.code === "auth/invalid-email"
+    ) {
+
+      showPopup(
+        "Invalid Email",
+        "Please enter a valid email address.",
+        "warning",
+        "✉️"
+      );
+
+      return;
+    }
+
+
+    showPopup(
+      "Unable to Create Account",
+      "We couldn't create your account right now. Please try again.",
+      "error",
+      "×"
+    );
+
+  }
+
+};
+
+
+window.loginUser = async function () {
+
+  const email =
+    document.getElementById("accEmail")?.value.trim();
+
+  const password =
+    document.getElementById("accPassword")?.value.trim();
+
+
+  if (!email || !password) {
+
+    showPopup(
+      "Details Required",
+      "Please enter your email address and password.",
+      "warning",
+      "!"
+    );
+
+    return;
+  }
+
+
+  try {
+
+    await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+
+
+    showPopup(
+      "Welcome Back",
+      "You have logged in successfully.",
+      "success",
+      "✓"
+    );
+
+
+    setTimeout(() => {
+      openStore();
+    }, 800);
+
+
+  } catch (e) {
+
+    console.error(e);
+
+
+    if (
+      e.code === "auth/wrong-password" ||
+      e.code === "auth/user-not-found" ||
+      e.code === "auth/invalid-credential"
+    ) {
+
+      showPopup(
+        "Login Failed",
+        "The email or password you entered is incorrect. Please try again.",
+        "error",
+        "×"
+      );
+
+      return;
+    }
+
+
+    if (
+      e.code === "auth/invalid-email"
+    ) {
+
+      showPopup(
+        "Invalid Email",
+        "Please enter a valid email address.",
+        "warning",
+        "✉️"
+      );
+
+      return;
+    }
+
+
+    showPopup(
+      "Unable to Login",
+      "Something went wrong while signing you in. Please try again.",
+      "error",
+      "×"
+    );
+
+  }
+
+};
+
+
+window.logoutUser = async function () {
+
+  try {
+
+    await signOut(auth);
+
+    showPopup(
+      "Logged Out",
+      "You have been safely logged out of your account.",
+      "logout",
+      "→"
+    );
+
+    setTimeout(() => {
+      openStore();
+    }, 700);
+
+
+  } catch (e) {
+
+    showPopup(
+      "Logout Failed",
+      "Something went wrong while logging out. Please try again.",
+      "error",
+      "×"
+    );
+
+  }
+
+};
+
+    
+onAuthStateChanged(auth, (user) => {
+
+  const email = document.getElementById("accEmail");
+  const password = document.getElementById("accPassword");
+
+  const createBtn = document.getElementById("createBtn");
+  const loginBtn = document.getElementById("loginBtn");
+  const logoutBtn = document.getElementById("logoutBtn");
+  const accountMenu = document.getElementById("accountMenu");
+
+  if (user) {
+
+    // LOGIN HO GAYA → Email & Password hide
+    if (email) {
+      email.style.display = "none";
+    }
+
+    if (password) {
+      password.style.display = "none";
+    }
+
+    if (createBtn) {
+      createBtn.style.display = "none";
+    }
+
+    if (loginBtn) {
+      loginBtn.style.display = "none";
+    }
+
+    if (logoutBtn) {
+      logoutBtn.style.display = "block";
+    }
+
+    if (accountMenu) {
+      accountMenu.style.display = "block";
+    }
+
+  } else {
+
+    // LOGOUT → Email & Password wapas show
+    if (email) {
+      email.style.display = "block";
+    }
+
+    if (password) {
+      password.style.display = "block";
+    }
+
+    if (createBtn) {
+      createBtn.style.display = "block";
+    }
+
+    if (loginBtn) {
+      loginBtn.style.display = "block";
+    }
+
+    if (logoutBtn) {
+      logoutBtn.style.display = "none";
+    }
+
+    if (accountMenu) {
+      accountMenu.style.display = "none";
+    }
+
+  }
+
+});
+
+
+
+// Card Sliders
+
+document.querySelectorAll(".slider").forEach(s=>{
+
+const slides=s.querySelectorAll(".slide");
+
+let i=0;
+
+s.querySelector(".right").onclick=()=>{
+
+slides[i].classList.remove("show");
+
+i=(i+1)%slides.length;
+
+slides[i].classList.add("show");
+
+};
+
+s.querySelector(".left").onclick=()=>{
+
+slides[i].classList.remove("show");
+
+i=(i-1+slides.length)%slides.length;
+
+slides[i].classList.add("show");
+
+};
+
+});
+
+// Page Navigation
+
+function show(page){
+
+  [store,payment,account,purchases].forEach(p=>{
+    if(!p) return;
+
+    p.classList.remove("active");
+    p.classList.add("hidden");
+  });
+
+  if(!page) return;
+
+  page.classList.remove("hidden");
+  page.classList.add("active");
+}
+
+const store=document.getElementById("storePage");
+const payment=document.getElementById("paymentPage");
+const account=document.getElementById("accountPage");
+const purchases=document.getElementById("purchasesPage");
+
+
+window.openStore = ()=>show(store);
+window.goHome = ()=>show(store);
+window.openAccount = ()=>show(account);
+
+/* =========================================
+   KEYBOARD + BOTTOM NAV FIX
+========================================= */
+
+(function(){
+
+  function checkKeyboard(){
+
+    if(!window.visualViewport) return;
+
+    const viewportHeight =
+      window.visualViewport.height;
+
+    const screenHeight =
+      window.innerHeight;
+
+    const keyboardOpen =
+      screenHeight - viewportHeight > 120;
+
+    document.body.classList.toggle(
+      "keyboard-open",
+      keyboardOpen
+    );
+
+  }
+
+  if(window.visualViewport){
+
+    window.visualViewport.addEventListener(
+      "resize",
+      checkKeyboard
+    );
+
+    window.visualViewport.addEventListener(
+      "scroll",
+      checkKeyboard
+    );
+
+  }
+
+  window.addEventListener(
+    "resize",
+    checkKeyboard
+  );
+
+  checkKeyboard();
+
+})();
+
+
+</script>
+
+<script type="module" src="script.js"></script>
+
+<!-- TERMS & CONDITIONS PAGE -->
+
+<div id="termsPage" class="terms-page">
+
+  <div class="terms-header">
+
+    <button
+      class="terms-back"
+      onclick="closeTerms()"
+      aria-label="Back">
+      ←
+    </button>
+
+
+    <div class="terms-brand">
+      <span>SUMIT</span><strong> FF STORE</strong>
+    </div>
+
+
+    <div class="terms-header-icon">
+      ✓
+    </div>
+
+  </div>
+
+
+  <div class="terms-content">
+
+
+    <div class="terms-hero">
+
+      <div class="terms-icon">
+        📜
+      </div>
+
+      <h1>
+        Terms &amp; Conditions
+      </h1>
+
+      <p>
+        Please read these terms carefully before
+        using the store or purchasing any listing.
+      </p>
+
+    </div>
+
+
+    <!-- 01 -->
+
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>01</span>
+        General Terms
+      </div>
+
+      <p>
+        By using Sumit FF Store, you agree to follow
+        these Terms &amp; Conditions and use the
+        platform responsibly.
+      </p>
+
+    </div>
+
+
+    <!-- 02 -->
+
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>02</span>
+        Listing Information
+      </div>
+
+      <p>
+        Please review the FF ID details, level, rank,
+        likes, photos, price and availability carefully
+        before making a purchase.
+      </p>
+
+    </div>
+
+
+    <!-- 03 -->
+
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>03</span>
+        Payment
+      </div>
+
+      <p>
+        Payments must be made only through the UPI
+        details displayed on the official payment page.
+      </p>
+
+    </div>
+
+
+    <!-- 04 -->
+
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>04</span>
+        Payment Verification
+      </div>
+
+      <p>
+        After making a payment, the buyer must submit
+        a valid WhatsApp number, UTR / Transaction ID
+        and payment screenshot for verification.
+      </p>
+
+    </div>
+
+
+    <!-- 05 -->
+
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>05</span>
+        Sold Out Listings
+      </div>
+
+      <p>
+        Listings marked as
+        <strong>Sold Out</strong>
+        are not available for purchase.
+        Please check the listing status before
+        making any payment.
+      </p>
+
+    </div>
+
+
+    <!-- 06 -->
+
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>06</span>
+        Buyer Responsibility
+      </div>
+
+      <p>
+        Buyers are responsible for checking the
+        listing details, price, availability and
+        other displayed information before completing
+        a transaction.
+      </p>
+
+    </div>
+
+
+    <!-- 07 -->
+
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>07</span>
+        Fraud &amp; Misuse
+      </div>
+
+      <p>
+        Fake payment screenshots, incorrect transaction
+        details or fraudulent activity may result in
+        rejection of the order.
+      </p>
+
+    </div>
+
+
+    <!-- 08 -->
+
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>08</span>
+        Support
+      </div>
+
+      <p>
+        For questions regarding a listing or an order,
+        please use the support option available on
+        the website.
+      </p>
+
+    </div>
+
+
+    <!-- FINAL NOTE -->
+
+    <div class="terms-footer-note">
+
+      <div class="terms-footer-icon">
+        ✓
+      </div>
+
+      <div>
+
+        <strong>Sumit FF Store</strong>
+
+        <p>
+          By using this website, you acknowledge that
+          you have read and understood these
+          Terms &amp; Conditions.
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+<!-- FF #512 PROFILE -->
+
+<div id="profile512">
+
+  <div class="profile-wrap">
+
+    <div class="profile-top">
+
+      <button
+        class="profile-back"
+        onclick="closeProfile512()">
+        ←
+      </button>
+
+      <div class="profile-title">
+        FF ID #512
+      </div>
+
+    </div>
+
+
+    <div class="profile-card">
+
+      <div class="profile-id">
+
+        <span>ID: FF #512</span>
+
+        <span class="profile-status">
+          <span class="live-dot"></span>
+          AVAILABLE
+        </span>
+
+      </div>
+
+
+      <div class="profile-price">
+
+        <small>PRICE</small>
+
+        <strong>₹4999</strong>
+
+      </div>
+
+
+      <div class="profile-grid">
+
+        <div class="profile-item">
+          <div class="profile-label">🎮 LEVEL</div>
+          <div class="profile-value">77</div>
+        </div>
+
+        <div class="profile-item">
+          <div class="profile-label">❤️ LIKES</div>
+          <div class="profile-value">...</div>
+        </div>
+
+        <div class="profile-item">
+          <div class="profile-label">🕐 OLD</div>
+          <div class="profile-value">...</div>
+        </div>
+
+        <div class="profile-item">
+          <div class="profile-label">🔥 EVO GUNS</div>
+          <div class="profile-value">4</div>
+        </div>
+
+        <div class="profile-item">
+          <div class="profile-label">🎁 PRIME</div>
+          <div class="profile-value">...</div>
+        </div>
+
+        <div class="profile-item">
+          <div class="profile-label">🎭 EMOTES</div>
+          <div class="profile-value">...</div>
+        </div>
+
+      </div>
+
+
+      <button
+        class="profile-buy"
+        onclick="buyNow('FF ID #512',4999)">
+        BUY NOW
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- IMAGE VIEWER -->
+
+<div id="imageViewer">
+
+  <button
+    class="image-viewer-close"
+    onclick="closeImageViewer()">
+    ×
+  </button>
+
+  <img
+    id="viewerImage"
+    src=""
+    alt="FF ID Image">
+
+</div>
+
+<script>
+
+/* =========================================
+   FF STORE - ALL ID DETAILS
+   YAHAN SE VALUES MANUALLY CHANGE KARNA
+========================================= */
+
+const ffDetails = {
+
+  511: {
+    price: "₹599",
+    status: "SOLD OUT",
+    level: "73",
+    likes: "15066",
+    old: "6 year",
+    evo: "3",
+    prime: "4",
+    emotes: "42"
+  },
+
+  512: {
+    price: "₹4999",
+    status: "AVAILABLE",
+    level: "77",
+    likes: "31188",
+    old: "7 year",
+    evo: "7",
+    prime: "8",
+    emotes: "109"
+  },
+
+  513: {
+    price: "₹3999",
+    status: "AVAILABLE",
+    level: "76",
+    likes: "24060",
+    old: "7 year",
+    evo: "13",
+    prime: "7",
+    emotes: "96"
+  },
+
+  514: {
+    price: "₹1799",
+    status: "AVAILABLE",
+    level: "78",
+    likes: "37346",
+    old: "7 year",
+    evo: "4",
+    prime: "5",
+    emotes: "76"
+  },
+
+  515: {
+    price: "₹1299",
+    status: "AVAILABLE",
+    level: "66",
+    likes: "9228",
+    old: "5 year",
+    evo: "7",
+    prime: "5",
+    emotes: "44"
+  },
+
+  516: {
+    price: "₹2799",
+    status: "AVAILABLE",
+    level: "78",
+    likes: "25614",
+    old: "6 year",
+    evo: "6",
+    prime: "6",
+    emotes: "94"
+  },
+
+  517: {
+    price: "₹1599",
+    status: "AVAILABLE",
+    level: "68",
+    likes: "11430",
+    old: "6 year",
+    evo: "7",
+    prime: "5",
+    emotes: "65"
+  },
+
+  518: {
+    price: "₹1999",
+    status: "AVAILABLE",
+    level: "75",
+    likes: "18335",
+    old: "7 year",
+    evo: "5",
+    prime: "4",
+    emotes: "53"
+  },
+
+  519: {
+    price: "₹2299",
+    status: "AVAILABLE",
+    level: "75",
+    likes: "24374",
+    old: "7 year",
+    evo: "18",
+    prime: "6",
+    emotes: "92"
+  },
+
+  520: {
+    price: "₹999",
+    status: "AVAILABLE",
+    level: "71",
+    likes: "13152",
+    old: "6 year",
+    evo: "9",
+    prime: "5",
+    emotes: "45"
+  },
+
+  521: {
+    price: "₹3499",
+    status: "AVAILABLE",
+    level: "75",
+    likes: "21262",
+    old: "7 year",
+    evo: "11",
+    prime: "6",
+    emotes: "75"
+  },
+
+  522: {
+    price: "₹2399",
+    status: "AVAILABLE",
+    level: "68",
+    likes: "9549",
+    old: "6 year",
+    evo: "7",
+    prime: "6",
+    emotes: "84"
+  },
+  
+    523: {
+    price: "₹999",
+    status: "AVAILABLE",
+    level: "61",
+    likes: "4119",
+    old: "4 year",
+    evo: "11",
+    prime: "6",
+    emotes: "45"
+  },
+
+  524: {
+    price: "₹899",
+    status: "AVAILABLE",
+    level: "80",
+    likes: "43907",
+    old: "6 year",
+    evo: "3",
+    prime: "4",
+    emotes: "56"
+  },
+  
+  525: {
+  price: "₹3000",
+  status: "AVAILABLE",
+  level: "80",
+  likes: "62917",
+  old: "8 year",
+  evo: "4",
+  prime: "6",
+  emotes: "72"
+},
+  
+
+};
+
+
+/* =========================================
+   APPLY PROFILE TO EVERY CARD
+========================================= */
+
+function applyFFProfiles(){
+
+  document.querySelectorAll(".card").forEach(card => {
+
+    /* ID IMAGE SE MILEGI
+       posts/ff511/1.png
+       posts/ff512/1.png
+       etc.
+    */
+
+    const image = card.querySelector(".slider img");
+
+    if(!image) return;
+
+    const src = image.getAttribute("src") || "";
+
+    const match = src.match(/ff(\d+)/i);
+
+    if(!match) return;
+
+    const id = match[1];
+
+    const data = ffDetails[id];
+
+    if(!data) return;
+
+
+    /* EXISTING BUY ACTION SAVE */
+
+    const oldBuy = card.querySelector(".buy");
+
+    let buyAction = "";
+
+    if(oldBuy){
+
+      buyAction =
+        oldBuy.getAttribute("onclick") || "";
+
+    }
+
+
+    /* INFO */
+
+    const info = card.querySelector(".info");
+
+    if(!info) return;
+
+
+    /* STATUS */
+
+    const available =
+      data.status.toUpperCase() === "AVAILABLE";
+
+
+    /* PROFILE */
+
+    info.innerHTML = `
+
+      <div class="quick-profile">
+
+        <div class="quick-head">
+
+          <span class="quick-id">
+            ID: FF #${id}
+          </span>
+
+          <span
+            class="quick-status"
+            style="
+              color:${available
+                ? "#00ff66"
+                : "#ff3b30"};
+            "
+          >
+
+            <span
+              class="quick-dot"
+              style="
+                background:${available
+                  ? "#00ff66"
+                  : "#ff3b30"};
+
+                box-shadow:
+                  0 0 8px
+                  ${available
+                    ? "#00ff66"
+                    : "#ff3b30"};
+
+                ${
+                  available
+                  ? ""
+                  : "animation:none;opacity:1;"
+                }
+              "
+            ></span>
+
+            ${available
+              ? "AVAILABLE"
+              : "SOLD OUT"}
+
+          </span>
+
+        </div>
+
+
+        <div class="quick-price">
+
+          <span>PRICE</span>
+
+          <strong>
+            ${data.price}
+          </strong>
+
+        </div>
+
+
+        <div class="quick-grid">
+
+          <div class="quick-item level">
+            <span>🎮 LEVEL</span>
+            <b>${data.level}</b>
+          </div>
+
+
+          <div class="quick-item likes">
+            <span>❤️ LIKES</span>
+            <b>${data.likes}</b>
+          </div>
+
+
+          <div class="quick-item old">
+            <span>🕐 OLD</span>
+            <b>${data.old}</b>
+          </div>
+
+
+          <div class="quick-item evo">
+            <span>🔥 EVO GUNS</span>
+            <b>${data.evo}</b>
+          </div>
+
+
+          <div class="quick-item prime">
+            <span>🎁 PRIME</span>
+            <b>${data.prime}</b>
+          </div>
+
+
+          <div class="quick-item emotes">
+            <span>🎭 EMOTES</span>
+            <b>${data.emotes}</b>
+          </div>
+
+        </div>
+
+
+        ${
+          available
+
+          ? `
+
+            <button
+              class="buy"
+              ${
+                buyAction
+                ? `onclick="${buyAction
+                    .replace(/"/g,"&quot;")}"`
+                : ""
+              }
+            >
+              Buy Now
+            </button>
+
+          `
+
+          : `
+
+            <button
+              class="buy"
+              disabled
+              style="
+                background:#555;
+                color:#fff;
+                cursor:not-allowed;
+              "
+            >
+              SOLD OUT
+            </button>
+
+          `
+        }
+
+      </div>
+
+    `;
+
+  });
+
+}
+
+
+/* =========================================
+   RUN
+========================================= */
+
+if(document.readyState === "loading"){
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    applyFFProfiles
+  );
+
+}else{
+
+  applyFFProfiles();
+
+}
+
+</script>
+
+</body>
+</html>

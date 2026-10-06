@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checkout - Sumit FF Store</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section style="padding:30px;max-width:600px;margin:auto">
+
+<h1 style="text-align:center;color:#FFD700">Complete Payment</h1>
+
+<div class="card">
+
+<img src="assets/qr.png" style="width:100%;border-radius:20px">
+
+<div style="padding:20px">
+
+<h2 id="idName">FF ID</h2>
+
+<h1 id="amount" style="color:#FFD700">₹999</h1>
+
+<button id="payBtn" class="buy-btn">Open Payment App</button>
+
+<hr style="margin:20px 0;border-color:#333">
+
+<form id="orderForm">
+
+<input name="name" placeholder="Your Name" required>
+
+<input name="telegram" placeholder="@telegram" required>
+
+<input name="uid" placeholder="Free Fire UID" required>
+
+<input type="file" name="photo" accept="image/*" required>
+
+<button class="buy-btn" type="submit">Submit Screenshot</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="payment.js"></script>
+
+</body>
+</html>
