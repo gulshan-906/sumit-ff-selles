@@ -1725,7 +1725,7 @@ window.addEventListener("popstate", function(event){
 
 window.copyUPI = async function(){
 
-  const UPI_ID = "jaiswara@fam";
+  const UPI_ID = "mauryasell@fam";
 
   try{
 
